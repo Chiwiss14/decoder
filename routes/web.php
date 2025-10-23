@@ -17,4 +17,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Route::get(function () {
+//     Route::get('/decoder', [DecoderController::class, 'index'])->name('decoder.index');
+//     Route::post('/decoder/decode', [DecoderController::class, 'decode'])->name('decoder.decode');
+// });
+
+Route::get('/portfolio', function () {
+    return view('portfolio');
+});
+
+
 require __DIR__.'/auth.php';
